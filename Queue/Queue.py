@@ -20,3 +20,17 @@ class Queue:
             return True
         else:
             return False
+
+    def peek(self):
+        if self.is_empty():
+            return None
+        else:
+            return self.queue[0]
+
+q = Queue()
+q.enqueue(10)
+q.enqueue(20)
+q.enqueue(30)
+print(q.dequeue())
+print(q.dequeue())
+print(q.dequeue())
