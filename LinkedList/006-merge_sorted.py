@@ -43,3 +43,12 @@ def mergeSort(head1, head2):
         p.next = p1
 
     return head.next
+
+l1 = [3, 6, 9, 22, 55]
+l2 = [4, 7, 8, 31, 77]
+
+head1 = createLinkedList(l1)
+head2 = createLinkedList(l2)
+
+head = mergeSort(head1, head2)
+printLinkedList(head)
