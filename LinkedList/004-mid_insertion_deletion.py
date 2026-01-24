@@ -48,5 +48,13 @@ print_list(head1)
 print('*' * 100)
 print_list(head2)
 
+# 删除s
+head1.next.next = head1.next.next.next
+head2.next = head2.next.next
+
+print('*' * 100)
+print_list(head1)
+print('*' * 100)
+print_list(head2)
 
 
