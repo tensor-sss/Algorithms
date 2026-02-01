@@ -20,7 +20,7 @@ def quick_sort(l1, left, right):
                 l1[i] = l1[j]
                 i += 1
 
-            # 从最左白  往右走
+            # 从最左边  往右走
             while i < j and l1[i] < temp:
                 i += 1
             if i < j:
