@@ -36,6 +36,14 @@ def dijkstra(graph, v):
     return dist, path
 
 
+def print_path(path, dest):
+    v = path[dest]
+    result = []
+    while v != -1:
+        result.append(v)
+        v = path[v]
+    return result[::-1] + [dest]
+
 # 邻接矩阵
 if __name__ == '__main__':
     inf = float('inf')
@@ -49,8 +57,13 @@ if __name__ == '__main__':
         [inf, inf, inf, inf, inf, inf,   inf]
     ]
     dist, path = dijkstra(graph, v=0)  # v:起始节点
-    print(dist)
-    print(path)
+    # print(dist)  # [inf, 4, 5, 6, 10, 9, 16]
+    # print(path)  # [-1, 0, 1, 0, 5, 2, 4]
+    res = print_path(path, 6)
+    print(res)  # [0, 1, 2, 5, 4, 6]
+
+
+
 
 
 

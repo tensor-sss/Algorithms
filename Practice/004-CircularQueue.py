@@ -25,4 +25,10 @@ class CircularQueue:
         self.front = (self.front + 1) % self.capacity
         return x
 
+    def get_front_elem(self):
+        return self.queue[self.front]
+
+    def get_rear_elem(self):
+        return self.queue[self.rear-1]
+
 
