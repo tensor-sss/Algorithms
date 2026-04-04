@@ -11,7 +11,10 @@ def combination(n, k):
     def backtrack(nums, temp):
 
         if len(temp) == k:
-            res.append(temp.copy())
+            x = temp.copy()
+            x = sorted(x)
+            if x not in res:
+                res.append(x)
             return
 
         for i in range(len(nums)):

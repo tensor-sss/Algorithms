@@ -2,8 +2,8 @@
 
 def combination(l, target):
     res = []
-    temp = []
-    def backtrack(l,temp, is_visited):
+
+    def backtrack(l,temp):
 
         if sum(temp) == target:
             res.append(temp.copy())
@@ -13,21 +13,13 @@ def combination(l, target):
             return
 
         for i in range(len(l)):
-
-            if is_visited[i]:
-                continue
-
-
-
             temp.append(l[i])
-            #is_visited[i] = True
-            backtrack(l,temp, is_visited)
+            backtrack(l, temp)
             temp.pop()
-            #is_visited[i] = False
 
 
     is_visited = [False] * len(l)
-    backtrack(l, temp, is_visited)
+    backtrack(l, [])
     return res
 
 
