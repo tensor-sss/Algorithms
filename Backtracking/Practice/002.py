@@ -18,7 +18,6 @@ def combination(l, target):
             temp.pop()
 
 
-    is_visited = [False] * len(l)
     backtrack(l, [])
     return res
 
